@@ -1,0 +1,39 @@
+.border-5px {
+    border: 5px solid grey;
+}
+.image{
+    transition: all 1s ease-in-out;
+}
+.image:hover {
+    border-color: yellow;
+    transform: rotate(45deg);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .6);
+}
+
+.popup_enabled {
+    display: flex;
+}
+
+.popup_disabled {
+    display: none;
+}
+
+.popup__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media (min-width: 992px) {
+    .border-red {
+        border-color: red;
+    }
+}
