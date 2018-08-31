@@ -1,39 +1,58 @@
-.border-5px {
-    border: 5px solid grey;
+body{
+    overflow-x: hidden;
 }
-.image{
-    transition: all 1s ease-in-out;
+h1{
+    position: relative;
+    text-align: center;
 }
-.image:hover {
-    border-color: yellow;
-    transform: rotate(45deg);
+.refresh_section{
+    position: relative;
+     padding: 1% 44%;
+     border-bottom: 2px solid black;
 }
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.refresh{
+    position: relative;
+    top: -10px;
+    background-color: white; 
+    cursor: pointer;
+}
+#tableBody > .item{
+    position: relative;
+    border: 2px solid black;
+    border-top: 0px;
+    padding: 5px; 
+    padding-right: 10px;
+}
+.item > .v{
+    position: absolute;
     height: 100%;
-    background: rgba(0,0,0, .6);
+    top: -0.1%;
+    right: 0px;
+    padding: 0.4%;
 }
 
-.popup_enabled {
-    display: flex;
+.item:hover{
+    cursor: pointer;
 }
 
-.popup_disabled {
+#tableBody > .accordion{
     display: none;
 }
-
-.popup__close {
-    position: absolute;
-    right: 0;
-    top: 0;
+#right,#left {
+    position: relative;
+    top: 0px;
 }
-
-@media (min-width: 992px) {
-    .border-red {
-        border-color: red;
-    }
+#left{ 
+}
+#right{
+    float: right;
+}
+#number{
+    position: relative;
+    width: 70px;
+}
+.input_form{
+    position: absolute;
+    width: 100%;
+    left: 44.5%;
 }

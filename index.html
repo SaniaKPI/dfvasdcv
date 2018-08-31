@@ -9,42 +9,34 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body onload ="send()">
 <div class="container">
     <div class="row">
-        <div class="col mb-3 mt-3">
-            Введите фразу и получите табилцу комментариев, в которых есть эта фраза
-        </div>
+        <h1 class="col mb-3 mt-3">
+            The Guardian News
+        </h1>
     </div>
-    <div class="row mb-3">
-        <div class="col">
-            <form>
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" id="phrase" class="form-control" placeholder="Введите фразу">
-                    </div>
-                    <button type="button" class="btn btn-primary mr-1" onclick="send()">Отправить</button>
-                    <button type="button" class="btn btn-danger" onclick="cancel()">Сброс</button>
-                </div>
-            </form>
-        </div>
+    <div class="refresh_section">
+                    <button class = "refresh" type="button"  onclick="send()">Refresh</button>
     </div>
     <div class="row">
         <div class="col">
             <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Body</th>
-                </tr>
-                </thead>
-                <tbody id="tableBody">
-
-                </tbody>
+               
+                <div id="tableBody" onclick="changeAccordination()">
+                </div>
             </table>
+            
         </div>
+    </div>
+    <div >
+        <button class = "refresh" id = "left" type="button"  onclick="decrease()">previos page</button>
+        <span class = input_form>    
+            <input id = "number" type="number" min = "1" onchange ="numberForm()" value="1">
+            <span>of</span>
+            <span id = "totalPages"></span>
+        </span>
+        <button class = "refresh" id ="right" type="button"  onclick="increase()">next page</button>
     </div>
 </div>
 
